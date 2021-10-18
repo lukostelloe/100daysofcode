@@ -6,6 +6,7 @@ function Example() {
   const [day, setday] = useState(0);
   const [done, setdone] = useState("");
   const [mood, setmood] = useState("");
+  const [newmood, setnewmood] = useState("");
 
   const [infolist, setinfolist] = useState([]);
 
@@ -22,6 +23,18 @@ function Example() {
       mood: mood,
     });
   };
+
+  const updateMood = (id) => {
+    Axios.put("http://localhost:3001/update", {
+      id: id,
+      newmood: newmood,
+    });
+  };
+
+  const deleteMood = (id) => {
+    Axios.delete(`http://localhost:3001/delete/${id}`);
+  };
+
   return (
     <div className="formcontainer">
       <h1>100 days of code blog</h1>
@@ -52,10 +65,19 @@ function Example() {
 
       {infolist.map((val, key) => {
         return (
-          <div key={key}>
+          <div key={key} className="result">
             <h4>Day number: {val.day}</h4>
             <h4>What I did today: {val.done}</h4>
             <h4>How I feel after coding: {val.mood}</h4>
+            <input
+              type="text"
+              placeholder="new mood"
+              onChange={(e) => {
+                setnewmood(e.target.value);
+              }}
+            />
+            <button onClick={() => updateMood(val._id)}>Update</button>
+            <button oncClick={() => deleteMood(val._id)}>Delete</button>
           </div>
         );
       })}

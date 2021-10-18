@@ -40,6 +40,28 @@ app.get("/read", async (req, res) => {
   });
 });
 
+app.put("/update", async (req, res) => {
+  const newmood = req.body.newmood;
+  const id = req.body.id;
+
+  try {
+    await summaryModel.findById(id, (err, updatedMood) => {
+      updatedMood.mood = newmood;
+      updatedMood.save();
+      res.send("update");
+    });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.delete("/delete/:id", async (req, res) => {
+  const id = req.params.id;
+
+  await summaryModel.findByIdAndRemove(id).exec();
+  res.send("deleted");
+});
+
 app.listen(3001, () => {
   console.log("server running on port 3001");
 });
