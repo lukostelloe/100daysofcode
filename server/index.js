@@ -35,12 +35,11 @@ app.get("/read", async (req, res) => {
     if (err) {
       res.send(err);
     }
-
     res.send(result);
   });
 });
 
-app.put("/update", async (req, res) => {
+app.put("/updatemood", async (req, res) => {
   const newmood = req.body.newmood;
   const id = req.body.id;
 
@@ -55,10 +54,25 @@ app.put("/update", async (req, res) => {
   }
 });
 
+app.put("/updatedone", async (req, res) => {
+  const newdone = req.body.newdone;
+  const id = req.body.id;
+
+  try {
+    await summaryModel.findById(id, (err, updatedDone) => {
+      updatedDone.done = newdone;
+      updatedDone.save();
+      res.send("update");
+    });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
 app.delete("/delete/:id", async (req, res) => {
   const id = req.params.id;
 
-  await summaryModel.findByIdAndRemove(id).exec();
+  await summaryModel.findByIdAndDelete(id).exec();
   res.send("deleted");
 });
 

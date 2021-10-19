@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -15,6 +16,9 @@ function Navbar() {
           <li>
             <a href="https://twitter.com/home">Twitter</a>
           </li>
+          <Link to={"./Dashboard"}>
+            <li>Dashboard</li>
+          </Link>
         </ul>
       </div>
     </div>
