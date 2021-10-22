@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+}
+
+.mountain {
+  width: 100%;
+  height: 600px;
+}
+
+.head_text {
+  position: relative;
+}
+.text_on_image {
+  color: white;
+  position: absolute;
+  left: 40%;
+  bottom: 60%;
+}

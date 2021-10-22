@@ -7,16 +7,22 @@ function Navbar() {
     <div>
       <div>
         <ul>
-          <Link to={"/"}>
+          <Link to="/" className="nav_link">
             <li>Luke Costelloe</li>
           </Link>
-          <Link to="/about">
-            <li>About</li>
+          <Link to="/hundays" className="nav_link">
+            <li>100daysblog</li>
           </Link>
-          <Link to="/example">
-            <li>Example</li>
+          <Link to="/musicmood" className="nav_link">
+            <li>Music Mood</li>
           </Link>
-          <Link to="/shop">
+          <Link to="/exercises" className="nav_link">
+            <li>Exercises</li>
+          </Link>
+          <Link to="/cv" className="nav_link">
+            <li>CV</li>
+          </Link>
+          <Link to="/shop" className="nav_link">
             <li>Shop</li>
           </Link>
           <li>

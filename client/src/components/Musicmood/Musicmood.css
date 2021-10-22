@@ -1,0 +1,205 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* overflow: auto; */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  border-radius: 15px;
+  flex-wrap: wrap;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.radio_input {
+  display: none;
+}
+
+.radio_label {
+  margin: 20px;
+  padding: 8px 14px;
+  font-size: 14px;
+  color: #fff;
+  background: #00856a;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.radio_input:checked + .radio_label {
+  background: #ff39e5;
+}
+
+.radio_label:hover {
+  background: #00755e;
+}
+
+.submitButton {
+  width: 200px;
+  margin: 20px;
+  padding: 10px;
+
+  margin: 30px;
+
+  background-color: #ffde34;
+
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.submitButton:hover {
+  cursor: pointer;
+  background-color: #ffd500;
+}
+
+.player {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #009e7e;
+  bottom: 0;
+  width: 600px;
+  height: 120px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.player_dot {
+  height: 60px;
+  width: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  box-shadow: 1px 1px 5px 1px #007e65;
+}
+
+.player_dot:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+.player_play {
+  position: absolute;
+  bottom: 23px;
+  left: 25px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 12px solid #00a887;
+}
+
+.player_play:active {
+  display: hidden;
+}
+
+.player_pause {
+  position: absolute;
+  bottom: 22px;
+  left: 21px;
+  width: 16px;
+  height: 16px;
+  background-color: #00a887;
+}
+
+.player_pause:active {
+  display: hidden;
+}
+
+.player_pauseline {
+  position: absolute;
+  left: 6px;
+  bottom: 0px;
+  width: 4px;
+  height: 16px;
+  background-color: rgb(255, 255, 255);
+}
+
+.player_songname {
+  position: absolute;
+  top: 20px;
+  left: 140px;
+  color: white;
+}
+
+.player_timedisplay {
+  position: absolute;
+  top: 50px;
+  left: 140px;
+  color: white;
+}
+
+.player_rangebar {
+  position: absolute;
+  width: 50%;
+  bottom: 15px;
+  left: 135px;
+}
+
+.result_container p {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .result_container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(30px);
+  }
+
+  .player {
+    width: 100%;
+  }
+
+  .container {
+    min-height: 100vh;
+    justify-content: start;
+  }
+
+  .form {
+    padding-bottom: 150px;
+  }
+}
+
+@media (max-width: 475px) {
+  .player_rangebar {
+    position: absolute;
+    width: 50%;
+    bottom: 15px;
+    left: 120px;
+  }
+}
+
+@media (max-width: 340px) {
+  .player_timedisplay {
+    position: absolute;
+    top: 60px;
+    left: 140px;
+  }
+}
