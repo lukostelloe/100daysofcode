@@ -1,7 +1,7 @@
 import React from "react";
 
-function Exercises() {
+function Contact() {
   return <div>Exercises page</div>;
 }
 
-export default Exercises;
+export default Contact;

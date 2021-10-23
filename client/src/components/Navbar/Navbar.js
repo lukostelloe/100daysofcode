@@ -16,11 +16,8 @@ function Navbar() {
           <Link to="/musicmood" className="nav_link">
             <li>Music Mood</li>
           </Link>
-          <Link to="/exercises" className="nav_link">
-            <li>Exercises</li>
-          </Link>
-          <Link to="/cv" className="nav_link">
-            <li>CV</li>
+          <Link to="/contact" className="nav_link">
+            <li>Contact</li>
           </Link>
           <Link to="/shop" className="nav_link">
             <li>Shop</li>

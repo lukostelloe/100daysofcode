@@ -17,13 +17,20 @@ function HunDays() {
     });
   }, []);
 
-  const addToList = () => {
-    window.location.reload();
-    Axios.post("http://localhost:3001/insert", {
-      day: day,
-      done: done,
-      mood: mood,
-    });
+  const addToList = async () => {
+    try {
+      const response = await Axios.post("http://localhost:3001/insert", {
+        day: day,
+        done: done,
+        mood: mood,
+      });
+
+      setinfolist([...infolist, response.data]);
+    } catch (error) {
+      console.log("there is an error with addToList function");
+    }
+
+    // update component state
   };
 
   const updateMood = (id) => {
