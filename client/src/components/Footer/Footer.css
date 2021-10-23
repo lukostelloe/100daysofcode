@@ -4,10 +4,11 @@
   justify-content: space-evenly;
   align-items: center;
 
+  margin: 5px;
   padding: 5px;
 
   /* I CAN REMOVE THIS FIXED AFTER, BETTER TO FIX WHILE CODING */
-  position: fixed;
+  /* position: fixed; */
 
   bottom: 0;
   left: 0;
