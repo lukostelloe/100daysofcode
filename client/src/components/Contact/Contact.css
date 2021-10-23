@@ -7,5 +7,28 @@
 
 .contact_textarea {
   height: 100px;
-  width: 400px;
+  width: 100%;
+}
+
+.contact_page_and_form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+h2 {
+  padding: 10px;
+}
+
+input {
+  border-radius: 5px;
+}
+
+select {
+  height: 30px;
+  width: 100%;
+}
+
+textarea {
+  border-radius: 5px;
 }

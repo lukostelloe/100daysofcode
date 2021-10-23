@@ -34,6 +34,7 @@
 
 .exp_1 {
   display: flex;
+  align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
 
@@ -43,6 +44,7 @@
 .exp_2 {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
 
   border-left: 1px solid grey;
@@ -53,7 +55,14 @@
 .exp_3 {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
 
   padding: 10px;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
 }

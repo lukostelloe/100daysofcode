@@ -19,15 +19,6 @@ function Navbar() {
           <Link to="/contact" className="nav_link">
             <li>Contact</li>
           </Link>
-          <Link to="/shop" className="nav_link">
-            <li>Shop</li>
-          </Link>
-          <li>
-            <a href="https://www.100daysofcode.com/">100 days of code</a>
-          </li>
-          <li>
-            <a href="https://twitter.com/home">Twitter</a>
-          </li>
         </ul>
       </div>
     </div>
