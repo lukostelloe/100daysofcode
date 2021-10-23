@@ -1,0 +1,11 @@
+.contact_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_textarea {
+  height: 100px;
+  width: 400px;
+}
