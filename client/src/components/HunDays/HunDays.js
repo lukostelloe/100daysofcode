@@ -56,73 +56,69 @@ function HunDays() {
 
   return (
     <div className="form">
-      <div className="form_inside">
-        <div>
-          <h1>100 days of code blog</h1>
-          <form>
-            <input
-              className="form_input"
-              type="number"
-              placeholder="what number day is it"
-              onChange={(e) => {
-                setday(e.target.value);
-              }}
-            />
-            <input
-              className="form_input"
-              type="text"
-              placeholder="what I did today"
-              onChange={(e) => {
-                setdone(e.target.value);
-              }}
-            />
-            <input
-              className="form_input"
-              type="text"
-              placeholder="how my mood is after coding today"
-              onChange={(e) => {
-                setmood(e.target.value);
-              }}
-            />
-            <button onClick={addToList}>Add to list</button>
-          </form>
-        </div>
-        <div>
-          <h1>Recorded Days</h1>
+      <div>
+        <h1>100 days of code blog</h1>
+        <form>
+          <input
+            className="form_input"
+            type="number"
+            placeholder="what number day is it"
+            onChange={(e) => {
+              setday(e.target.value);
+            }}
+          />
+          <input
+            className="form_input"
+            type="text"
+            placeholder="what I did today"
+            onChange={(e) => {
+              setdone(e.target.value);
+            }}
+          />
+          <input
+            className="form_input"
+            type="text"
+            placeholder="how my mood is after coding today"
+            onChange={(e) => {
+              setmood(e.target.value);
+            }}
+          />
+          <button onClick={addToList}>Add to list</button>
+        </form>
+      </div>
+      <div>
+        <h1>Recorded Days</h1>
 
-          {infolist.map((val, key) => {
-            return (
-              <div key={key} className="result">
-                <h4>Day: {val.day}</h4>
-                <h4>Done: {val.done}</h4>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="new done"
-                    onChange={(e) => {
-                      setnewdone(e.target.value);
-                    }}
-                  />
-                  <button onClick={() => updateDone(val._id)}>Update</button>
-                </div>
-                <h4>Mood: {val.mood}</h4>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="new mood"
-                    onChange={(e) => {
-                      setnewmood(e.target.value);
-                    }}
-                  />
-                  <button onClick={() => updateMood(val._id)}>Update</button>
-                </div>
-                <button onClick={() => deleteMood(val._id)}>
-                  Delete Entry
-                </button>
+        {infolist.map((val, key) => {
+          return (
+            <div key={key} className="result">
+              <h4>Day: {val.day}</h4>
+              <h4>Done: {val.done}</h4>
+              <div>
+                <input
+                  type="text"
+                  placeholder="new done"
+                  onChange={(e) => {
+                    setnewdone(e.target.value);
+                  }}
+                />
+                <button onClick={() => updateDone(val._id)}>Update</button>
               </div>
-            );
-          })}
-        </div>
+              <h4>Mood: {val.mood}</h4>
+              <div>
+                <input
+                  type="text"
+                  placeholder="new mood"
+                  onChange={(e) => {
+                    setnewmood(e.target.value);
+                  }}
+                />
+                <button onClick={() => updateMood(val._id)}>Update</button>
+              </div>
+              <button onClick={() => deleteMood(val._id)}>Delete Entry</button>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

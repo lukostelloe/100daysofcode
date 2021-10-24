@@ -6,7 +6,7 @@ function Contact() {
     <div className="contact_page">
       <h2>Contact</h2>
       <div className="contact_page_and_form">
-        <div>
+        <div className="contact_question">
           <h2>Got a question? I'd love to hear from you</h2>
         </div>
         <form className="contact_form">

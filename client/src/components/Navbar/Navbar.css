@@ -1,19 +1,16 @@
 ul {
-  /* POSITION FIXED FOR THE NAVBAR WILL MAKE ELEMENTS HIDE BEHIND IT */
-  /* position: fixed; */
-
-  margin: 0;
-  padding: 0;
-
+  margin: 0px;
+  padding: 0px;
   width: 100%;
 
   list-style-type: none;
-  z-index: 1;
   color: white;
 
   background-color: #7510f7;
 
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
@@ -29,6 +26,7 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  margin: 5px;
 }
 
 li a:hover {

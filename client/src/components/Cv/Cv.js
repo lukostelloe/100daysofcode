@@ -41,7 +41,7 @@ function Cv() {
             </div>
           </div>
           <h2>Technologies</h2>
-          <div>
+          <div className="technologies">
             <img src={html} alt="html" />
             <img src={css} alt="html" />
             <img src={js} alt="html" />
