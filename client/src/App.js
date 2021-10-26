@@ -1,6 +1,5 @@
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-// import Footer from "./components/Footer/Footer";
+// import Navbar from "./components/Navbar/Navbar";
 
 import HunDays from "./components/HunDays/HunDays";
 import MusicMood from "./components/Musicmood/Musicmood";
@@ -14,15 +13,14 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
+        <Homepage />
         <Switch>
-          {/* <Route path="/hundays" component={HunDays} />
+          <Route path="/hundays" component={HunDays} />
           <Route path="/musicmood" component={MusicMood} />
           <Route path="/contact" component={Contact} />
-          <Route path="/" component={Cv} /> */}
-          <Route path="/" component={Homepage} />
+          <Route exact path="/cv" component={Cv} />
         </Switch>
-        {/* <Footer /> */}
       </div>
     </Router>
   );
