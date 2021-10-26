@@ -6,6 +6,7 @@ import HunDays from "./components/HunDays/HunDays";
 import MusicMood from "./components/Musicmood/Musicmood";
 import Contact from "./components/Contact/Contact";
 import Cv from "./components/Cv/Cv";
+import Homepage from "./components/Homepage/Homepage";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -15,10 +16,11 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route path="/hundays" component={HunDays} />
+          {/* <Route path="/hundays" component={HunDays} />
           <Route path="/musicmood" component={MusicMood} />
           <Route path="/contact" component={Contact} />
-          <Route path="/" component={Cv} />
+          <Route path="/" component={Cv} /> */}
+          <Route path="/" component={Homepage} />
         </Switch>
         {/* <Footer /> */}
       </div>
