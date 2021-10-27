@@ -1,5 +1,5 @@
 import "./App.css";
-// import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 import HunDays from "./components/HunDays/HunDays";
 import MusicMood from "./components/Musicmood/Musicmood";
