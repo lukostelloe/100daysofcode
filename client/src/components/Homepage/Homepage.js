@@ -7,7 +7,7 @@ function Homepage() {
     <div>
       <div className="homepage_div">
         <h1 className="homepage_div_big_text">Hi, I'm Luke.</h1>
-        <h1 className="homepage_div_big_text">Junior Full Stack Developer</h1>
+        <h1 className="homepage_div_big_text">Junior Developer</h1>
       </div>
       <div className="projects">
         <Link to="/musicmood">
