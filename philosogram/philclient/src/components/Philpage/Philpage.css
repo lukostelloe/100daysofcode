@@ -1,0 +1,11 @@
+.philpage_app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.userimage {
+  width: 600px;
+  height: 400px;
+}

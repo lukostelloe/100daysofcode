@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(246, 246, 246);
+  margin: 0;
+  padding: 0;
+}
+
+.switch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
